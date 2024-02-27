@@ -27,7 +27,10 @@ const T	min(T &arg1, T &arg2)
 {
 	std::cout << GREEN << "min()" << RESET << " : " << "Finding min between " << BLUE << arg1 << RESET << " and " << BLUE << arg2 << RESET << "..." << std::endl;
 	if (arg1 == arg2)
+	{
+		std::cout << GREEN << arg1 << " = " << arg2 << " -> returning 2nd arg." << std::endl;
 		return (arg2);
+	}
 	return ((arg1 < arg2) ? arg1 : arg2);
 }
 
@@ -36,7 +39,10 @@ const T	max(T &arg1, T &arg2)
 {
 	std::cout << GREEN << "min()" << RESET << " : " << "Finding max between " << BLUE << arg1 << RESET << " and " << BLUE << arg2 << RESET << "..." << std::endl;
 	if (arg1 == arg2)
+	{
+		std::cout << GREEN << arg1 << " = " << arg2 << " -> returning 2nd arg." << std::endl;
 		return (arg2);
+	}
 	return ((arg1 > arg2) ? arg1 : arg2);
 }
 

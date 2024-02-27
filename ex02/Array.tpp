@@ -11,6 +11,8 @@ Array<T>::Array(unsigned int n) : _size(n)
 {
 	if (_size == 0)
 		throw WrongSize();
+	else if (_size >= 2147483647)
+		throw TooBig();
 	this->_array = new T[_size];
 	std::cout << "Array constructed with size " << n << "." << std::endl; 
 }
@@ -69,4 +71,10 @@ template <typename T>
 const char *Array<T>::WrongSize::what() const throw()
 {
 	return (RED "Size Error : size must be a non NULL positive number." RESET);
+}
+
+template <typename T>
+const char *Array<T>::TooBig::what() const throw()
+{
+	return (RED "Error : Cannot allocate this much (maybe negative number) !" RESET);
 }

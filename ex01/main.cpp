@@ -2,7 +2,7 @@
 
 int	main(void)
 {
-	std::string array[5] = {"hello","word","how","is","going"};
+	std::string array[5] = {"hello","magnifique","correcteur","comment","ca va?"};
 	std::cout << MAGENTA << "[Array] :" << RESET << std::endl;
 	iter(array, 5, &print);
 

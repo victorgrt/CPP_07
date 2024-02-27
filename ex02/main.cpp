@@ -79,5 +79,21 @@ int	main(void)
 	{
 		std::cerr << e.what() << '\n';
 	}
+	try
+	{
+		Array<int> error_array(-1);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	try
+	{
+		Array<int> error_array(-2147483647);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
 	return (0);
 }

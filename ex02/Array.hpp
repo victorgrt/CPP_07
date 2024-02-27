@@ -32,6 +32,10 @@ class Array
 			public:
 				virtual const char *what(void) const throw();
 		};
+		class TooBig : public std::exception {
+			public:
+				virtual const char *what(void) const throw();
+		};
 
 		T& operator[](unsigned int index);
 		size_t	size() const;
